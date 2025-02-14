@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Teh Blog Pipeline</title>
+      <title>The Blog Pipeline</title>
       <link>/posts/the-blog-pipeline-/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       
       <guid>/posts/the-blog-pipeline-/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;h2 id=&#34;quick-overview-of-the-skills-used&#34;&gt;Quick overview of the Skills used&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;Markdown
 Python
 PowerShell Scripts
@@ -29,17 +29,8 @@ Cloudflare
 &lt;li&gt;Actually…wait….find out where your Obsidian directories are. Right click your &lt;em&gt;posts&lt;/em&gt; folder and choose &lt;em&gt;show in system explorer&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;You’ll need this directory in upcoming steps.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250213121858.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;setting-up-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelinesetting-up-hugo&#34;&gt;Setting up Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#setting-up-hugo&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;install-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelineinstall-hugo&#34;&gt;Install Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#install-hugo&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisiteshttpsblognetworkchuckcompostsmy-insane-blog-pipelineprerequisites&#34;&gt;Prerequisites&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#prerequisites&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Install Git: &lt;a href=&#34;https://github.com/git-guides/install-git&#34;&gt;https://github.com/git-guides/install-git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Install Go: &lt;a href=&#34;https://go.dev/dl/&#34;&gt;https://go.dev/dl/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;install-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelineinstall-hugo-1&#34;&gt;Install Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#install-hugo-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Link: &lt;a href=&#34;https://gohugo.io/installation/&#34;&gt;https://gohugo.io/installation/&lt;/a&gt;&lt;/p&gt;</description>
-      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250213121858.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;quick-overview-of-the-skills-used&#34;&gt;Quick overview of the Skills used&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;Markdown
 Python
 PowerShell Scripts
