@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Adam on Terminal</title>
-    <link>/tags/adam/</link>
-    <description>Recent content in Adam on Terminal</description>
+    <title>AI on Terminal</title>
+    <link>/tags/ai/</link>
+    <description>Recent content in AI on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/adam/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting AI on my PC</title>
       <link>/posts/llm-ai-on-my-pc/</link>
@@ -30,22 +30,6 @@
 !&lt;img src=&#34;/images/Pasted%20image%2020250215180712.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Then have fun, of course the higher B number you can run the better and smarter your AI will be as it stands for how many billions of parameters it has and the Distill versions involves training smaller models to emulate the behaviour and reasoning patterns of larger models, enabling them to perform similar tasks with reduced computational requirements. For instance, the &amp;ldquo;DeepSeek-R1-Distill-Qwen-1.5B&amp;rdquo; model is a distilled version of Qwen2.5-Math-1.5B, which specializes in mathematics and logical reasoning.&lt;/li&gt;
 &lt;/ol&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Who Am I ?</title>
-      <link>/posts/who-am-i/</link>
-      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/who-am-i/</guid>
-      <description>&lt;p&gt;Hi I&amp;rsquo;m &lt;a href=&#34;https://adamhunter.uk&#34;&gt;Adam&lt;/a&gt; self-appointed Geek love all things tech who wanted to start a blog because its more tech skills to learn and develop.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll Post randomly here stuff I do with my Home Lab and stuff I do for real world needs/wants&lt;/p&gt;
-&lt;p&gt;I have plans to start some content creation on YouTube in the not so distant future and will have a website up to help with finding videos and supporting documentation around it at &lt;a href=&#34;https://meeaehlabs.co.uk&#34;&gt;MeeaehLabs&lt;/a&gt; so keep an eye out for that.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Hi I&amp;rsquo;m &lt;a href=&#34;https://adamhunter.uk&#34;&gt;Adam&lt;/a&gt; self-appointed Geek love all things tech who wanted to start a blog because its more tech skills to learn and develop.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll Post randomly here stuff I do with my Home Lab and stuff I do for real world needs/wants&lt;/p&gt;
-&lt;p&gt;I have plans to start some content creation on YouTube in the not so distant future and will have a website up to help with finding videos and supporting documentation around it at &lt;a href=&#34;https://meeaehlabs.co.uk&#34;&gt;MeeaehLabs&lt;/a&gt; so keep an eye out for that.&lt;/p&gt;
-&lt;p&gt;Otherwise enjoy my random posts and I hope some may help you in your tech journey.&lt;/p&gt;
 </content>
     </item>
     

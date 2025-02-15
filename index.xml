@@ -6,7 +6,33 @@
     <description>Recent content on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting AI on my PC</title>
+      <link>/posts/llm-ai-on-my-pc/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/llm-ai-on-my-pc/</guid>
+      <description>&lt;h2 id=&#34;i-got-ai-locally-on-my-pc-and-its-amazing&#34;&gt;I Got AI locally on my PC and its amazing&lt;/h2&gt;
+&lt;p&gt;I Love Using Ai to help with day to day tasks and its getting better every day so of course I wanted to try it locally my PC isn&amp;rsquo;t the best Specs but its enough to support Deep Seeks R1 7B Image its even helped me create this post with the below screenshot.
+!&lt;img src=&#34;/images/Pasted%20image%2020250215175825.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;strong&gt;How to get this on your PC&lt;/strong&gt;&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;i-got-ai-locally-on-my-pc-and-its-amazing&#34;&gt;I Got AI locally on my PC and its amazing&lt;/h2&gt;
+&lt;p&gt;I Love Using Ai to help with day to day tasks and its getting better every day so of course I wanted to try it locally my PC isn&amp;rsquo;t the best Specs but its enough to support Deep Seeks R1 7B Image its even helped me create this post with the below screenshot.
+!&lt;img src=&#34;/images/Pasted%20image%2020250215175825.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;strong&gt;How to get this on your PC&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Got to &lt;a href=&#34;https://lmstudio.ai/&#34;&gt;LM Studio&lt;/a&gt; and download the program based on your OS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250215180405.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Follow all the steps and open the Program then go to discover or search in the top bar for the model you want like &amp;lsquo;Deep Seek R1&amp;rsquo; and select either 1.5B,7B,8B,14B, or if you&amp;rsquo;ve got some really powerful stuff go higher
+!&lt;img src=&#34;/images/Pasted%20image%2020250215180712.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Then have fun, of course the higher B number you can run the better and smarter your AI will be as it stands for how many billions of parameters it has and the Distill versions involves training smaller models to emulate the behaviour and reasoning patterns of larger models, enabling them to perform similar tasks with reduced computational requirements. For instance, the &amp;ldquo;DeepSeek-R1-Distill-Qwen-1.5B&amp;rdquo; model is a distilled version of Qwen2.5-Math-1.5B, which specializes in mathematics and logical reasoning.&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
     <item>
       <title>The Blog Pipeline</title>
       <link>/posts/the-blog-pipeline-/</link>
