@@ -8,6 +8,126 @@
     <language>en</language>
     <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Docker Images and Creating them</title>
+      <link>/posts/docker-images/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/docker-images/</guid>
+      <description>&lt;h2 id=&#34;what-have-i-crafted-and-why&#34;&gt;What have I crafted and why?&lt;/h2&gt;
+&lt;p&gt;I Love Docker and since I&amp;rsquo;m slowly learning about creating my own images for my own use cases I&amp;rsquo;m loving the flexibility it opens up to me.&lt;/p&gt;
+&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250219110116.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ENV Variables&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been playing with adding ENV variables into my images recently these work like sticky notes almost adding personalisation into the container without changing the code meaning you can use the same image for multiple different applications i.e. Pre-Production, Different Content Displayed, Etc.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;what-have-i-crafted-and-why&#34;&gt;What have I crafted and why?&lt;/h2&gt;
+&lt;p&gt;I Love Docker and since I&amp;rsquo;m slowly learning about creating my own images for my own use cases I&amp;rsquo;m loving the flexibility it opens up to me.&lt;/p&gt;
+&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250219110116.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ENV Variables&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been playing with adding ENV variables into my images recently these work like sticky notes almost adding personalisation into the container without changing the code meaning you can use the same image for multiple different applications i.e. Pre-Production, Different Content Displayed, Etc.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;But Why ?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When I first made my own site it was hosted using a Virtual Windows machine running IIS which worked but wasn&amp;rsquo;t great windows uses so many resources so the footprint of one website being hosted was huge. So I switched to an Virtual Ubuntu Server running Apache2 this was so much smaller and did the same thing but for each website I wanted it was a lot of work, create a new VM, Update it, Install programs, transfer files for each change. I hated it id already been using docker images for somethings like passbolt and wondered if i could make one that would just host my site then i can add it anywhere as many as i like and use it on my K8S cluster project.
+And again this was great but when i changed the website i had to rebuild the image and push the updated one to the Docker Hub then tell my docker server to pull the new image to keep everything updated and by the time i had 3 Websites this was crazy.&lt;/p&gt;
+&lt;p&gt;So when i came to make this blog that would be updated much more frequently than any of my static sites i needed to rethink my plan.
+How can i get frequent updates on the container as is but still make it useful well ENV Variables was the answer and Bash Scripts.&lt;/p&gt;
+&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250219111808.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-images&#34;&gt;The Images&lt;/h2&gt;
+&lt;p&gt;So then I Created the Image &amp;lsquo;meeaehlabs/static-site:latest&amp;rsquo; which could be run with the below command&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run -d --restart always -p 80:80 \
+    -e GIT_REPO_URL=&amp;#34;https://github.com/meeaehlabs-uk/staticsite.git&amp;#34; \
+    -e GIT_BRANCH=&amp;#34;hostinger&amp;#34; \
+    --name my-static-site \
+    meeaehlabs/static-site:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/r/meeaehlabs/static-site&#34;&gt;View On Docker Hub For More INFO On How To Run The Image For Yourself&lt;/a&gt;
+Again This was great I could specify which git repo to get the website files from and even the branch in that Repo then it would check for updates every hour and pull and update the site files if there were.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;WebHooks&lt;/em&gt;
+While it works its still not the best if for example I was putting this in a Kubernetes cluster I don&amp;rsquo;t really want 10-15 containers all downloading the same files from the same place, so I&amp;rsquo;ve got a plan for that in the future.
+However I still wanted it to be a bit smarter. I use Portainer to manage my docker Server and it has an option to easily add a webhook to a container so when it gets a post notification it re-deploys the container. Now if I make the image in a way that it only pulls website files during start-up and never again I don&amp;rsquo;t endlessly have it running a script that may crash out and id be unaware.&lt;/p&gt;
+&lt;p&gt;So now all I need to do is add the webhook to GitHub so when there is an update on the repo it send a Post notification to Portainer who re-deploys the image much simpler and less prone to something going wrong only issue is when its re-deploying the website may be un-reachable for 30 Seconds but for me that is perfectly acceptable.&lt;/p&gt;
+&lt;h2 id=&#34;all-the-images&#34;&gt;All the Images&lt;/h2&gt;
+&lt;p&gt;So with my new found love of using ENV variables in my images making them more flexible I updated some other images I had made a while back.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CIRT (Can I Reach The)&lt;/em&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run --rm -d \
+  -p 80:80 \
+  -e HOST_INFO=&amp;#34;$(hostname)&amp;#34; \
+  meeaehlabs/cirt:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/r/meeaehlabs/cirt&#34;&gt;View On Docker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This Container simply spins up a webpage that says yes and shows a picture of the word yes i used this to monitor if a server was reachable by adding it as a webpage monitor to &lt;a href=&#34;https://github.com/louislam/uptime-kuma&#34;&gt;MyKuma&lt;/a&gt; and setting it to find the text &amp;lsquo;yes&amp;rsquo; to confirm the monitor is &amp;ldquo;Up&amp;rdquo; you confirm that not only is the system reachable but its working correctly since the webpage is displayed. but i wanted more. In the Command above youll notice a line that says &amp;lsquo;-e HOST_INFO=&amp;quot;$(hostname)&amp;quot;&amp;rsquo; what this does is gets thew hostname of the server its running on and passes it to a script in the container that updates a placeholder in the HTML file with the server host name. Why? if youve got a few of these running it helps identify where this particular one is coming from, or if you have different Environments in a Kube cluster you can clear the $(hostname) part and instead add your own text like &amp;ldquo;Main Prod Cluster&amp;rdquo; or &amp;ldquo;Main Cluster ENV:PPE&amp;rdquo; its a simple addition but adds a lot of usability and then you can set you Monitoring Service to find the text you specify on the webpage.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Static-Site&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Public Repo Use This Command&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run -d --restart always -p 80:80 \
+    -e GIT_REPO_URL=&amp;#34;https://github.com/meeaehlabs-uk/staticsite.git&amp;#34; \
+    -e GIT_BRANCH=&amp;#34;hostinger&amp;#34; \
+    --name my-static-site \
+    meeaehlabs/static-site:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Private Repo Use This Command&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run -d --restart always -p 80:80 \
+    -e GIT_REPO_URL=&amp;#34;https://yourgitusername:classicgittoken@github.com/example-user/example-repo.git&amp;#34; \
+    -e GIT_BRANCH=&amp;#34;main&amp;#34; \
+    --name my-static-site \
+    meeaehlabs/static-site:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/r/meeaehlabs/static-site&#34;&gt;View On Docker Hub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This container I&amp;rsquo;m using to host websites you can run the &amp;lsquo;Public Repo&amp;rsquo; command and you will see an example website pulled from the specified &lt;a href=&#34;https://github.com/meeaehlabs-uk/staticsite.git&#34;&gt;repo&lt;/a&gt; with information for how to edit and change it yourself for your own projects, this image checks every hour for updates and pulls them if an update is found or change the tag to &amp;lsquo;MeeaehLabs/static-site:test&amp;rsquo; and this image will check once a minute for updates good for testing in a Pre-production environment like if you want to see how a blog post looks before pushing to your Production repo.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Webhooks And Variables&lt;/em&gt;
+I have since expanded on this idea and wanted a webhook that GitHub would trigger when the repo has an update.&lt;/p&gt;
+&lt;p&gt;I created three images &amp;lsquo;meeaehlabs/static-site:host&amp;rsquo; this image is just to host and serve the static website that you pull from the repo but i also created &amp;lsquo;meeaehlabs/static-site:webhook&amp;rsquo; and &amp;lsquo;meeaehlabs/static-site:hookey&amp;rsquo; both of these images will wait for a post from the webhook on /trigger-update but the one tagged webhook requires no secret/authentication and the one tagged hookey does require a secret/authentication which can be set-up when running the container with ENV variable &amp;lsquo;WEBHOOK_KEY&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Automate with Webhooks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;deploy the image as a stack/swarm with either the tags &amp;lsquo;host &amp;amp; &amp;lsquo;webhook&amp;rsquo; for a simple webhook that triggers the update from your repo or use &amp;lsquo;host&amp;rsquo; &amp;amp; &amp;lsquo;hookey&amp;rsquo; for a webhook that requires a secret you can set with the ENV Variable &amp;lsquo;WEBHOOK_KEY&amp;rsquo; below is example of both and how to deploy them.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;With a secret&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;version: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3.9&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;services:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  webhook:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    container_name: site-webhook-keyed
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    image: meeaehlabs/static-site:hookey
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    environment:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - GIT_REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;GIT_REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# e.g., https://github.com/username/repo.git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - GIT_BRANCH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;GIT_BRANCH&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# e.g., main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - WEBHOOK_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;WEBHOOK_KEY&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# the secret and webhook url will be shown in the container logs when it first starts up&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - site-content:/site-content
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ports:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;5000:5000&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;# Exposes the webhook endpoint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  host:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    container_name: site-host
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    image: meeaehlabs/staticsite:host
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - site-content:/usr/share/nginx/html:ro
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ports:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;80:80&amp;#34;&lt;/span&gt;       &lt;span style=&#34;color:#75715e&#34;&gt;# Exposes the static website&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  site-content:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Make sure to add the required ENV variables for your Git Repo (GIT_REPO) and Branch (GIT_BRANCH) and Webhook Key (WEBHOOK_KEY) which will act like a password to use the webhook if none is entered it will sert the default one ImNoTSeCUrE852!!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Without a secret&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;version: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3.9&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;services:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  webhook:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    container_name: site-webhook-NoKey
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    image: meeaehlabs/static-site:webhook
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    environment:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - GIT_REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;GIT_REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# e.g., https://github.com/username/repo.git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - GIT_BRANCH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;GIT_BRANCH&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# e.g., main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - site-content:/site-content
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ports:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;5000:5000&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;# Exposes the webhook endpoint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  host:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    container_name: site-host
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    image: meeaehlabs/staticsite:host
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - site-content:/usr/share/nginx/html:ro
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ports:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;80:80&amp;#34;&lt;/span&gt;       &lt;span style=&#34;color:#75715e&#34;&gt;# Exposes the static website&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  site-content:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Make sure to add the required ENV variables for your Git Repo (GIT_REPO) and Branch (GIT_BRANCH)&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Getting AI on my PC</title>
       <link>/posts/llm-ai-on-my-pc/</link>
       <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
