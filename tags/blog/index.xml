@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Terminal</title>
+    <title>Blog on Adam-Blog</title>
     <link>/tags/blog/</link>
-    <description>Recent content in Blog on Terminal</description>
+    <description>Recent content in Blog on Adam-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -48,7 +48,7 @@ Docker
 Bash Scripts
 Cloudflare
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;the-setuphttpsblognetworkchuckcompostsmy-insane-blog-pipelinethe-setup&#34;&gt;The Setup&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#the-setup&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a new folder labelled &lt;em&gt;posts&lt;/em&gt; (or whatever you want). This is where you will add your blog posts&lt;/li&gt;
 &lt;li&gt;….that’s all you have to do&lt;/li&gt;
@@ -65,7 +65,7 @@ Docker
 Bash Scripts
 Cloudflare
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;the-setuphttpsblognetworkchuckcompostsmy-insane-blog-pipelinethe-setup&#34;&gt;The Setup&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#the-setup&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a new folder labelled &lt;em&gt;posts&lt;/em&gt; (or whatever you want). This is where you will add your blog posts&lt;/li&gt;
 &lt;li&gt;….that’s all you have to do&lt;/li&gt;
@@ -73,16 +73,16 @@ Cloudflare
 &lt;li&gt;You’ll need this directory in upcoming steps.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250213121858.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;setting-up-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelinesetting-up-hugo&#34;&gt;Setting up Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#setting-up-hugo&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;install-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelineinstall-hugo&#34;&gt;Install Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#install-hugo&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisiteshttpsblognetworkchuckcompostsmy-insane-blog-pipelineprerequisites&#34;&gt;Prerequisites&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#prerequisites&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h1 id=&#34;setting-up-hugo&#34;&gt;Setting up Hugo&lt;/h1&gt;
+&lt;h2 id=&#34;install-hugo&#34;&gt;Install Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Install Git: &lt;a href=&#34;https://github.com/git-guides/install-git&#34;&gt;https://github.com/git-guides/install-git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Install Go: &lt;a href=&#34;https://go.dev/dl/&#34;&gt;https://go.dev/dl/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;install-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelineinstall-hugo-1&#34;&gt;Install Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#install-hugo-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;install-hugo-1&#34;&gt;Install Hugo&lt;/h3&gt;
 &lt;p&gt;Link: &lt;a href=&#34;https://gohugo.io/installation/&#34;&gt;https://gohugo.io/installation/&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;create-a-new-sitehttpsblognetworkchuckcompostsmy-insane-blog-pipelinecreate-a-new-site&#34;&gt;Create a new site&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#create-a-new-site&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;create-a-new-site&#34;&gt;Create a new site&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Verify Hugo works&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -90,7 +90,7 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site websitename
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd websitename
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;download-a-hugo-themehttpsblognetworkchuckcompostsmy-insane-blog-pipelinedownload-a-hugo-theme&#34;&gt;Download a Hugo Theme&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#download-a-hugo-theme&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;download-a-hugo-theme&#34;&gt;Download a Hugo Theme&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Find themes from this link: &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;https://themes.gohugo.io/&lt;/a&gt;
 &lt;ul&gt;
@@ -112,7 +112,7 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Find a theme ---&amp;gt; https://themes.gohugo.io/&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;adjust-hugo-settingshttpsblognetworkchuckcompostsmy-insane-blog-pipelineadjust-hugo-settings&#34;&gt;Adjust Hugo settings&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#adjust-hugo-settings&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;adjust-hugo-settings&#34;&gt;Adjust Hugo settings&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Most themes you download will have an example configuration you can use. This is usually the best way to make sure Hugo works well and out of the box.&lt;/li&gt;
 &lt;li&gt;For the &lt;em&gt;Terminal&lt;/em&gt; theme, they gave this example config below.&lt;/li&gt;
@@ -206,18 +206,18 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;showcase&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showcase&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/showcase&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;test-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelinetest-hugo&#34;&gt;Test Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#test-hugo&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;test-hugo&#34;&gt;Test Hugo&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Verify Hugo works with your theme by running this command&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -t themename
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;walking-through-the-stepshttpsblognetworkchuckcompostsmy-insane-blog-pipelinewalking-through-the-steps&#34;&gt;Walking Through the Steps&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#walking-through-the-steps&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;walking-through-the-steps&#34;&gt;Walking Through the Steps&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;NOTE: There is a MEGA SCRIPT later in this blog that will do everything in one go.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;syncing-obsidian-to-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelinesyncing-obsidian-to-hugo&#34;&gt;Syncing Obsidian to Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#syncing-obsidian-to-hugo&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;windowshttpsblognetworkchuckcompostsmy-insane-blog-pipelinewindows&#34;&gt;Windows&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#windows&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;syncing-obsidian-to-hugo&#34;&gt;Syncing Obsidian to Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;robocopy sourcepath destination path /mir
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;maclinuxhttpsblognetworkchuckcompostsmy-insane-blog-pipelinemaclinux&#34;&gt;Mac/Linux&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#maclinux&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;maclinux&#34;&gt;Mac/Linux&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rsync -av --delete &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sourcepath&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;destinationpath&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-some-frontmatterhttpsblognetworkchuckcompostsmy-insane-blog-pipelineadd-some-frontmatter&#34;&gt;Add some frontmatter&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#add-some-frontmatter&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-some-frontmatter&#34;&gt;Add some frontmatter&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: blogtitle
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2025-01-01
@@ -226,8 +226,8 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - tag1
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - tag2
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;transfer-images-from-obsidian-to-hugohttpsblognetworkchuckcompostsmy-insane-blog-pipelinetransfer-images-from-obsidian-to-hugo&#34;&gt;Transfer Images from Obsidian to Hugo&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#transfer-images-from-obsidian-to-hugo&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;windowshttpsblognetworkchuckcompostsmy-insane-blog-pipelinewindows-1&#34;&gt;Windows&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#windows-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;transfer-images-from-obsidian-to-hugo&#34;&gt;Transfer Images from Obsidian to Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;windows-1&#34;&gt;Windows&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; shutil
@@ -264,7 +264,7 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            file&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;write(content)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Markdown files processed and images copied successfully.&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;maclinuxhttpsblognetworkchuckcompostsmy-insane-blog-pipelinemaclinux-1&#34;&gt;Mac/Linux&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#maclinux-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;maclinux-1&#34;&gt;Mac/Linux&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; shutil
@@ -301,23 +301,23 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            file&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;write(content)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Markdown files processed and images copied successfully.&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;setup-githubhttpsblognetworkchuckcompostsmy-insane-blog-pipelinesetup-github&#34;&gt;Setup GitHub&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#setup-github&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;setup-github&#34;&gt;Setup GitHub&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Git yourself an account&lt;/li&gt;
 &lt;li&gt;Then create a repo&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;authenticate-yourselfhttpsblognetworkchuckcompostsmy-insane-blog-pipelineauthenticate-yourself&#34;&gt;Authenticate yourself&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#authenticate-yourself&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;authenticate-yourself&#34;&gt;Authenticate yourself&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Generate an SSH key (Mac/Linux/Windows)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t rsa -b &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; -C &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your_email@example.com&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;push-to-githubhttpsblognetworkchuckcompostsmy-insane-blog-pipelinepush-to-github&#34;&gt;Push to GitHub&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#push-to-github&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;push-to-github&#34;&gt;Push to GitHub&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Step 8: Push the public folder to the hostinger branch using subtree split and force push&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Deploying to GitHub Hostinger...&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git subtree split --prefix public -b hostinger-deploy
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin hostinger-deploy:hostinger --force
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -D hostinger-deploy
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;the-mega-scripthttpsblognetworkchuckcompostsmy-insane-blog-pipelinethe-mega-script&#34;&gt;The Mega Script&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#the-mega-script&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id=&#34;windows-powershellhttpsblognetworkchuckcompostsmy-insane-blog-pipelinewindows-powershell&#34;&gt;Windows (Powershell)&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#windows-powershell&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;the-mega-script&#34;&gt;The Mega Script&lt;/h1&gt;
+&lt;h2 id=&#34;windows-powershell&#34;&gt;Windows (Powershell)&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# PowerShell Script for Windows&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Set variables for Obsidian to Hugo copy&lt;/span&gt;
@@ -473,7 +473,7 @@ Cloudflare
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -D hostinger-deploy
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Write-Host &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;All done! Site synced, processed, committed, built, and deployed.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;linuxmac-bashhttpsblognetworkchuckcompostsmy-insane-blog-pipelinelinuxmac-bash&#34;&gt;Linux/Mac (BASH)&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#linuxmac-bash&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;linuxmac-bash&#34;&gt;Linux/Mac (BASH)&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;set -euo pipefail
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
